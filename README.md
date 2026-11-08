@@ -51,60 +51,9 @@ My Agents provides a status bar capsule and dropdown panel displaying real-time 
 
 ## Installation & Setup
 
-### 1. Dependencies
-
-Ensure Python 3 is installed:
-
 ```bash
-sudo pacman -S python
+omarchy plugin add https://github.com/SushantKr-Me/omarchy-plugin-agents.git --enable
 ```
-
-### 2. Install Plugin
-
-Clone or copy `omarchy-plugin-agents` into your Omarchy plugins directory:
-
-```bash
-mkdir -p ~/.config/omarchy/plugins
-cp -r omarchy-plugin-agents ~/.config/omarchy/plugins/sushantkr.agents
-chmod +x ~/.config/omarchy/plugins/sushantkr.agents/*.sh ~/.config/omarchy/plugins/sushantkr.agents/*.py
-```
-
-### 3. Add to Status Bar
-
-Add the widget to `~/.config/omarchy/shell.json` inside your desired bar section (e.g. `right`):
-
-```json
-{
-  "id": "sushantkr.agents"
-}
-```
-
-Or enable it using the Omarchy CLI:
-
-```bash
-omarchy plugin enable sushantkr.agents right
-```
-
-### 4. Reload Shell
-
-```bash
-omarchy restart shell
-```
-
----
-
-## Configuration Options
-
-Configure options via `shell.json` or with `omarchy bar set`:
-
-| Key | Default | Description |
-|---|---|---|
-| `refreshIntervalSec` | `900` | Telemetry refresh frequency in seconds |
-| `syncMode` | `"Off"` | `"On"` enables multi-machine snapshot aggregation |
-| `syncDir` | `""` | Shared folder path for synced usage snapshots |
-| `providers` | `{}` | Per-provider toggles (`{"claude": {"enabled": true}}`) |
-
----
 
 ## License
 
